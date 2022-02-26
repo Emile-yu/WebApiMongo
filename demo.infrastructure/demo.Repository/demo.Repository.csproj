@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\demo.server\bin\Debug</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\demo.common\demo.common.csproj" />
+    <ProjectReference Include="..\demo.IRepository\demo.IRepository.csproj" />
+    <ProjectReference Include="..\demo.mongo.common\demo.mongo.common.csproj" />
+  </ItemGroup>
+
+</Project>
